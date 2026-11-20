@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ========================================================================
+       PUSHPAMANGALAM GOLD & DIAMONDS — VERSION 3 (HIGH-FASHION EDITORIAL)
+       PLACEHOLDER: Update contact details, addresses & links in js/config.js
+       ======================================================================== -->
+  <title>Pushpamangalam Gold &amp; Diamonds | High-Fashion Kerala Heritage Jewellery</title>
+  <meta
+    name="description"
+    content="Gold That Carries Your Story — 35 years in Mannancherry, now in Cherthala opposite Devi Kshetram Municipal Complex. BIS 916 HUID gold and IGI certified diamonds by Saju Pattara &amp; Sons."
+  />
+  <meta property="og:image" content="assets/images/logo-original.jpg" />
+  <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+
+  <!-- Google Fonts: Bodoni Moda (High-Contrast Editorial Serif) + DM Sans (Geometric Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;1,6..96,400;1,6..96,500&family=DM+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ========================================================================
+       1. CENTERED EDITORIAL HEADER
+       Desktop: Left Nav | Centered Stacked Logo | Right Nav + WhatsApp Pill
+       Mobile:  Left Menu Icon | Centered Logo | Right WhatsApp Icon
+       ======================================================================== -->
+  <header class="site-header" id="site-header">
+    <div class="container header-grid">
+
+      <!-- Left Slot: Desktop Nav / Mobile Menu Button -->
+      <div>
+        <nav class="header-nav-left" aria-label="Primary Navigation Left">
+          <a href="#collections" class="nav-link">Collections</a>
+          <a href="#services" class="nav-link">Services</a>
+          <a href="#legacy" class="nav-link">Legacy</a>
+        </nav>
+
+        <button
+          type="button"
+          id="mobile-menu-open"
+          class="mobile-menu-trigger"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="mobile-drawer"
+        >
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+            <line x1="4" y1="7" x2="20" y2="7" />
+            <line x1="4" y1="12" x2="20" y2="12" />
+            <line x1="4" y1="17" x2="20" y2="17" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Center Slot: Prominent Stacked Brand Logo (Wine Burgundy & Champagne Gold) -->
+      <a href="#top" class="center-brand" aria-label="Pushpamangalam Gold & Diamonds — By Saju Pattara & Sons">
+        <!-- OFFICIAL LOGO: Replace assets/images/logo-v3.png if needed -->
+        <img
+          src="assets/images/logo-v3.png"
+          alt="Pushpamangalam Gold &amp; Diamonds — By Saju Pattara &amp; Sons"
+          class="center-logo-img"
+          width="124"
+          height="62"
+        />
+      </a>
+
+      <!-- Right Slot: Desktop Nav + WhatsApp Pill / Mobile Quick WhatsApp Icon -->
+      <div style="display:flex; justify-content:flex-end;">
+        <nav class="header-nav-right" aria-label="Primary Navigation Right">
+          <a href="#reviews" class="nav-link">Reviews</a>
+          <a href="#visit-us" class="nav-link">Visit Us</a>
+          <a
+            href="https://wa.me/919800000000"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="pill pill--outline pill--sm"
+            data-whatsapp-link
+          >
+            <svg viewBox="0 0 24 24" fill="none" stroke="#1B7A47" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+            </svg>
+            WhatsApp
+          </a>
+        </nav>
+
+        <a
+          href="https://wa.me/919800000000"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="mobile-wa-trigger"
+          aria-label="Chat on WhatsApp"
+          data-whatsapp-link
+        >
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Left Slide-Out Drawer -->
+  <div class="mobile-drawer-backdrop" id="mobile-drawer-backdrop" aria-hidden="true"></div>
+  <aside class="mobile-drawer" id="mobile-drawer" aria-label="Mobile Menu" aria-hidden="true">
+    <div class="mobile-drawer-top">
+      <img src="assets/images/logo-v3.png" alt="Pushpamangalam Gold &amp; Diamonds" class="mobile-drawer-logo" />
+      <button type="button" id="mobile-menu-close" class="mobile-menu-trigger" style="display:inline-flex;" aria-label="Close navigation menu">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </button>
+    </div>
+
+    <ul class="mobile-nav-list">
+      <li><a href="#collections" class="mobile-nav-link">Collections <span aria-hidden="true">↗</span></a></li>
+      <li><a href="#services" class="mobile-nav-link">Services <span aria-hidden="true">↗</span></a></li>
+      <li><a href="#legacy" class="mobile-nav-link">Our Legacy <span aria-hidden="true">↗</span></a></li>
+      <li><a href="#reviews" class="mobile-nav-link">Reviews <span aria-hidden="true">↗</span></a></li>
+      <li><a href="#visit-us" class="mobile-nav-link">Visit Us <span aria-hidden="true">↗</span></a></li>
+    </ul>
+
+    <div class="mobile-drawer-actions">
+      <a href="tel:+919800000000" class="pill pill--wine" data-phone-href>Call Showroom</a>
+      <a href="https://wa.me/919800000000" target="_blank" rel="noopener noreferrer" class="pill pill--outline" data-whatsapp-link>Enquire on WhatsApp</a>
+    </div>
+  </aside>
+
+  <main id="top">
+
+    <!-- ======================================================================
+         2. PANORAMIC EDITORIAL HERO (MAGAZINE-COVER OPENING)
+         ====================================================================== -->
+    <section class="hero-editorial" aria-label="Hero">
+      <div class="container">
+
+        <div class="hero-header-center">
+          <!-- PLACEHOLDER: Heritage Micro-Label -->
+          <span class="micro-label">EST. 35 YEARS IN MANNANCHERRY &bull; NOW IN CHERTHALA</span>
+
+          <!-- PLACEHOLDER: Editorial Display Headline -->
+          <h1 class="hero-display-title">
+            Gold That Carries <em>Your Story.</em>
+          </h1>
+
+          <!-- Compact Two-Button Pill Cluster -->
+          <div class="hero-pill-cluster">
+            <a href="#visit-us" class="pill pill--wine">
+              Get Directions to Cherthala
+            </a>
+            <a
+              href="https://wa.me/919800000000"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="pill pill--outline"
+              data-whatsapp-link
+            >
+              Enquire on WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <!-- Edge-to-Edge Rounded Panoramic Photo + Floating Glassmorphism Trust Strip -->
+        <div class="hero-panorama-wrap">
+          <!-- PLACEHOLDER: Panoramic Bridal & Showroom Editorial Photograph -->
+          <img
+            src="assets/images/showroom-bridal.jpg"
+            alt="Sunlit bridal jewellery presentation at Pushpamangalam Gold & Diamonds Cherthala showroom"
+            class="hero-panorama-img"
+          />
+
+          <div class="hero-glass-strip" role="list" aria-label="Trust Guarantees">
+            <div class="glass-badge" role="listitem">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="8" r="6" />
+                <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11" />
+              </svg>
+              35+ Years Legacy
+            </div>
+
+            <div class="glass-badge" role="listitem">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                <polyline points="9 12 11 14 15 10" />
+              </svg>
+              BIS 916 HUID
+            </div>
+
+            <div class="glass-badge" role="listitem">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M6 3h12l4 6-10 13L2 9Z" />
+                <path d="M2 9h20" />
+              </svg>
+              IGI Certified Diamonds
+            </div>
+
+            <div class="glass-badge" role="listitem">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M3 12a9 9 0 0 1 15-6.7L21 8" />
+                <path d="M21 3v5h-5" />
+                <path d="M21 12a9 9 0 0 1-15 6.7L3 16" />
+              </svg>
+              Transparent Exchange
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         3. EDITORIAL LOOKBOOK CATEGORIES ("THE COLLECTIONS")
+         ====================================================================== -->
+    <section class="section section--white" id="collections">
+      <div class="container">
+
+        <div class="lookbook-top-bar reveal">
+          <div>
+            <span class="micro-label">Editorial Lookbook</span>
+            <h2 class="editorial-heading">The Collections</h2>
+          </div>
+          <p class="lookbook-note">
+            Curated 22K BIS 916 hallmarked gold and IGI-certified diamonds—crafted for Kerala weddings and quiet everyday luxury.
+          </p>
+        </div>
+
+        <!-- TOP ROW: 2 Large Featured Arch-Top Cards -->
+        <div class="lookbook-featured">
+
+          <!-- Featured 1: Bridal Collections -->
+          <article class="featured-arch-card reveal">
+            <div class="featured-arch-media">
+              <!-- PLACEHOLDER: Replace assets/images/cat-bridal.jpg -->
+              <img src="assets/images/cat-bridal.jpg" alt="Bridal Collections — Kerala Wedding Gold Jewellery" loading="lazy" />
+            </div>
+            <div class="featured-arch-meta">
+              <div>
+                <h3 class="featured-arch-title">Bridal Collections</h3>
+                <p class="featured-arch-sub">Heirloom Kerala harams, chokers &amp; bespoke wedding suites.</p>
+              </div>
+              <a
+                href="https://wa.me/919800000000"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="pill pill--outline pill--sm"
+                data-whatsapp-link
+                data-whatsapp-category="Bridal Collections"
+              >
+                WhatsApp for Designs ↗
+              </a>
+            </div>
+          </article>
+
+          <!-- Featured 2: Lightweight Jewellery -->
+          <article class="featured-arch-card reveal">
+            <div class="featured-arch-media">
+              <!-- PLACEHOLDER: Replace assets/images/cat-lightweight.jpg -->
+              <img src="assets/images/cat-lightweight.jpg" alt="Lightweight Jewellery — Modern 22K Gold" loading="lazy" />
+            </div>
+            <div class="featured-arch-meta">
+              <div>
+                <h3 class="featured-arch-title">Lightweight Jewellery</h3>
+                <p class="featured-arch-sub">Effortless contemporary gold tailored for everyday elegance.</p>
+              </div>
+              <a
+                href="https://wa.me/919800000000"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="pill pill--outline pill--sm"
+                data-whatsapp-link
+                data-whatsapp-category="Lightweight Jewellery"
+              >
+                WhatsApp for Designs ↗
+              </a>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- BOTTOM ROW: 5-Card Horizontal Scrollable Strip (Desktop & Mobile) -->
+        <div class="strip-header">
+          <span class="micro-label">Explore More Categories</span>
+          <span class="strip-hint">Scroll horizontally →</span>
+        </div>
+
+        <div class="lookbook-strip" role="region" aria-label="Additional Jewellery Collections">
+
+          <a href="https://wa.me/919800000000" target="_blank" rel="noopener noreferrer" class="strip-card" data-whatsapp-link data-whatsapp-category="Traditional Kerala & Antique">
+            <div class="strip-media">
+              <!-- PLACEHOLDER: Replace assets/images/cat-traditional.jpg -->
+              <img src="assets/images/cat-traditional.jpg" alt="Traditional Kerala & Antique Gold" loading="lazy" />
+            </div>
+            <div class="strip-footer">
+              <span class="strip-title">Traditional Kerala &amp; Antique</span>
+              <span class="strip-arrow" aria-hidden="true">↗</span>
+            </div>
+          </a>
+
+          <a href="https://wa.me/919800000000" target="_blank" rel="noopener noreferrer" class="strip-card" data-whatsapp-link data-whatsapp-category="Certified Diamonds">
+            <div class="strip-media">
+              <!-- PLACEHOLDER: Replace assets/images/cat-diamonds.jpg -->
+              <img src="assets/images/cat-diamonds.jpg" alt="Certified Diamonds" loading="lazy" />
+            </div>
+            <div class="strip-footer">
+              <span class="strip-title">Certified Diamonds</span>
+              <span class="strip-arrow" aria-hidden="true">↗</span>
+            </div>
+          </a>
+
+          <a href="https://wa.me/919800000000" target="_blank" rel="noopener noreferrer" class="strip-card" data-whatsapp-link data-whatsapp-category="Daily Wear">
+            <div class="strip-media">
+              <!-- PLACEHOLDER: Replace assets/images/cat-daily.jpg -->
+              <img src="assets/images/cat-daily.jpg" alt="Daily Wear Gold Jewellery" loading="lazy" />
+            </div>
+            <div class="strip-footer">
+              <span class="strip-title">Daily Wear</span>
+              <span class="strip-arrow" aria-hidden="true">↗</span>
+            </div>
+          </a>
+
+          <a href="https://wa.me/919800000000" target="_blank" rel="noopener noreferrer" class="strip-card" data-whatsapp-link data-whatsapp-category="Kids Collection">
+            <div class="strip-media">
+              <!-- PLACEHOLDER: Replace assets/images/cat-kids.jpg -->
+              <img src="assets/images/cat-kids.jpg" alt="Kids Collection Gold Jewellery" loading="lazy" />
+            </div>
+            <div class="strip-footer">
+              <span class="strip-title">Kids Collection</span>
+              <span class="strip-arrow" aria-hidden="true">↗</span>
+            </div>
+          </a>
+
+          <a href="https://wa.me/919800000000" target="_blank" rel="noopener noreferrer" class="strip-card" data-whatsapp-link data-whatsapp-category="Silver & Gifting">
+            <div class="strip-media">
+              <!-- PLACEHOLDER: Replace assets/images/cat-silver.jpg -->
+              <img src="assets/images/cat-silver.jpg" alt="Silver & Gifting" loading="lazy" />
+            </div>
+            <div class="strip-footer">
+              <span class="strip-title">Silver &amp; Gifting</span>
+              <span class="strip-arrow" aria-hidden="true">↗</span>
+            </div>
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         4. BENTO-GRID SERVICES & CRAFTSMANSHIP ("THE PUSHPAMANGALAM EXPERIENCE")
+         ====================================================================== -->
+    <section class="section section--linen" id="services">
+      <div class="container">
+
+        <div class="reveal">
+          <span class="micro-label">Craft &amp; Care</span>
+          <h2 class="editorial-heading">The Pushpamangalam Experience</h2>
+        </div>
+
+        <div class="bento-services">
+
+          <!-- Tile 1 (Wide): Bespoke Customization + Craftsmanship Photo -->
+          <article class="bento-tile bento-tile--wide-photo reveal">
+            <div>
+              <span class="bento-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 20h9" />
+                  <path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
+                </svg>
+              </span>
+              <h3 class="bento-title">Bespoke Customization</h3>
+              <p class="bento-desc">
+                Turn your vision into heirloom pieces with our master Kerala artisans—from custom bridal chokers to reimagined family keepsakes.
+              </p>
+              <a
+                href="https://wa.me/919800000000"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="bento-text-link"
+                data-whatsapp-link
+                data-whatsapp-category="Bespoke Customization"
+              >
+                Discuss a Custom Piece ↗
+              </a>
+            </div>
+            <div class="bento-photo-frame">
+              <!-- PLACEHOLDER: Replace assets/images/craftsmanship-detail.jpg with sketch / artisan bench photo -->
+              <img
+                src="assets/images/craftsmanship-detail.jpg"
+                alt="Handcrafted 22K Kerala gold Kasumala, Palakka mala and traditional craftsmanship"
+                loading="lazy"
+              />
+            </div>
+          </article>
+
+          <!-- Tile 2 (Square, Soft Burgundy Tint): Old Gold Exchange -->
+          <article class="bento-tile bento-tile--square-burgundy reveal">
+            <div>
+              <span class="bento-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 3v18" />
+                  <path d="M5 8h14" />
+                  <path d="M6 8l-3 6h6l-3-6z" />
+                  <path d="M18 8l-3 6h6l-3-6z" />
+                  <path d="M8 21h8" />
+                </svg>
+              </span>
+              <h3 class="bento-title">Old Gold Exchange</h3>
+              <p class="bento-desc">
+                Instant, transparent purity testing in front of you with 100% live market value and zero hidden deductions.
+              </p>
+            </div>
+            <span class="micro-label" style="margin-top:1.5rem;">Zero Deduction Promise</span>
+          </article>
+
+          <!-- Tile 3 (Square, Pure White): Bridal Styling -->
+          <article class="bento-tile bento-tile--square-white reveal">
+            <div>
+              <span class="bento-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2L9 7l3 3 3-3-3-5z" />
+                  <path d="M5 10c0 5.5 3.5 9 7 11 3.5-2 7-5.5 7-11" />
+                </svg>
+              </span>
+              <h3 class="bento-title">Bridal Styling</h3>
+              <p class="bento-desc">
+                Private family consultations for Kerala weddings inside our calm Cherthala bridal lounge.
+              </p>
+            </div>
+            <span class="micro-label" style="margin-top:1.5rem;">Private Appointments</span>
+          </article>
+
+          <!-- Tile 4 (Wide): Everyday Lightweight Gold -->
+          <article class="bento-tile bento-tile--wide-clean reveal">
+            <div>
+              <span class="bento-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 3c2 3.5 6 6 6 10a6 6 0 1 1-12 0c0-4 4-6.5 6-10z" />
+                  <path d="M12 10v6" />
+                </svg>
+              </span>
+              <h3 class="bento-title">Everyday Lightweight Gold</h3>
+              <p class="bento-desc">
+                Effortless, modern 22K designs engineered for daily comfort—graceful pieces meant to be worn, not locked away.
+              </p>
+            </div>
+            <a
+              href="https://wa.me/919800000000"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="pill pill--outline"
+              data-whatsapp-link
+              data-whatsapp-category="Everyday Lightweight Gold"
+            >
+              View Lightweight Pieces ↗
+            </a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         5. OUR LEGACY SPLIT-STORY ("FROM MANNANCHERRY TO CHERTHALA")
+         ====================================================================== -->
+    <section class="section section--white" id="legacy">
+      <div class="container legacy-spread">
+
+        <!-- Left: Overlapping Arch Interior + Square Exterior Architectural Collage -->
+        <div class="overlap-collage reveal">
+          <div class="collage-arch">
+            <!-- PLACEHOLDER: Replace assets/images/showroom-interior.jpg -->
+            <img
+              src="assets/images/showroom-interior.jpg"
+              alt="Bright sunlit interior of Pushpamangalam Gold & Diamonds Cherthala showroom"
+              loading="lazy"
+            />
+          </div>
+          <div class="collage-square">
+            <!-- PLACEHOLDER: Replace assets/images/showroom-exterior.jpg -->
+            <img
+              src="assets/images/showroom-exterior.jpg"
+              alt="Cherthala flagship facade opposite Devi Kshetram Municipal Complex"
+              loading="lazy"
+            />
+          </div>
+        </div>
+
+        <!-- Right: 2-Step Milestone Tracker + About Us + Call Link -->
+        <div class="reveal">
+          <span class="micro-label">Our Heritage</span>
+          <h2 class="editorial-heading">From Mannancherry to Cherthala</h2>
+
+          <div class="milestone-tracker">
+            <div class="milestone-step">
+              <div class="milestone-era">35 Years Ago</div>
+              <div class="milestone-place">Mannancherry, Alappuzha</div>
+            </div>
+
+            <div class="milestone-step milestone-step--active">
+              <div class="milestone-era">New Flagship</div>
+              <div class="milestone-place">Cherthala, Opposite Devi Kshetram Municipal Complex</div>
+            </div>
+          </div>
+
+          <!-- PLACEHOLDER: Concise About Us Paragraph -->
+          <p class="legacy-paragraph">
+            Founded over three decades ago in Mannancherry by <strong>Saju Pattara &amp; Sons</strong>, Pushpamangalam Gold &amp; Diamonds earned the lifelong trust of Alappuzha families through honest BIS 916 purity, fair billing, and warm personal guidance. Today, our bright new flagship showroom in Cherthala carries that exact heritage forward—pairing traditional Kerala craftsmanship with contemporary lightweight gold and certified diamonds.
+          </p>
+
+          <a href="tel:+919800000000" class="showroom-call-link" data-phone-href>
+            Call Showroom (<span data-phone-display>+91 98XXX XXXXX</span>) →
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         6. MINIMALIST SOCIAL PROOF & GOOGLE REVIEWS (STICKY + STAGGERED)
+         ====================================================================== -->
+    <section class="section section--linen" id="reviews">
+      <div class="container reviews-editorial-grid">
+
+        <!-- Left-Aligned Sticky Summary Block -->
+        <div class="reviews-sticky reveal">
+          <span class="micro-label">Client Words</span>
+          <div class="rating-hero-num">
+            4.9<span class="rating-hero-star">★</span>
+          </div>
+          <p class="rating-caption">
+            Based on 500+ Verified Google Reviews from families across Cherthala, Mannancherry, and Alappuzha.
+          </p>
+          <!-- PLACEHOLDER: Google Reviews URL managed via js/config.js -->
+          <a
+            href="https://www.google.com/maps"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="showroom-call-link"
+            data-google-reviews-url
+          >
+            Read on Google ↗
+          </a>
+        </div>
+
+        <!-- Right: 2-Column Staggered Border-Lined White Review Cards -->
+        <div class="reviews-staggered">
+
+          <div>
+            <!-- PLACEHOLDER Review 1 -->
+            <article class="editorial-review-card reveal">
+              <div class="editorial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <p class="editorial-quote">
+                “Three generations in our family have trusted Pushpamangalam since Mannancherry. Their new Cherthala showroom feels so calm and bright—our wedding Palakka and Kasumala sets were extraordinary.”
+              </p>
+              <div class="editorial-reviewer">
+                <strong>Lekshmi Nair</strong>
+                <span>Cherthala</span>
+              </div>
+            </article>
+
+            <!-- PLACEHOLDER Review 2 -->
+            <article class="editorial-review-card reveal">
+              <div class="editorial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <p class="editorial-quote">
+                “Exchanged old family gold with zero hassle. Purity was tested transparently right before us and they offered the best rate in Cherthala.”
+              </p>
+              <div class="editorial-reviewer">
+                <strong>Rajesh Kurian</strong>
+                <span>Mannancherry</span>
+              </div>
+            </article>
+          </div>
+
+          <div class="review-col-offset">
+            <!-- PLACEHOLDER Review 3 -->
+            <article class="editorial-review-card reveal">
+              <div class="editorial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <p class="editorial-quote">
+                “Finally found a Kerala jeweller with genuinely refined lightweight daily-wear bangles and IGI solitaire rings. The staff treated us like family without any pressure.”
+              </p>
+              <div class="editorial-reviewer">
+                <strong>Anjali Menon</strong>
+                <span>Alappuzha</span>
+              </div>
+            </article>
+
+            <!-- PLACEHOLDER Review 4 -->
+            <article class="editorial-review-card reveal">
+              <div class="editorial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <p class="editorial-quote">
+                “Had a custom bridal choker crafted from my mother’s vintage design. The finishing and HUID certification exceeded every expectation.”
+              </p>
+              <div class="editorial-reviewer">
+                <strong>Meera Varma</strong>
+                <span>Cherthala</span>
+              </div>
+            </article>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         7. FULL-WIDTH MAP & FLOATING CONTACT CARD ("VISIT US IN CHERTHALA")
+         ====================================================================== -->
+    <section class="map-showcase" id="visit-us" aria-label="Visit Us in Cherthala">
+
+      <!-- Full-Width Light-Toned Google Map Embed -->
+      <!-- PLACEHOLDER: Replace src with exact Google Business Profile embed URL -->
+      <iframe
+        title="Pushpamangalam Gold & Diamonds Cherthala Showroom Map"
+        class="map-bg-embed"
+        src="https://maps.google.com/maps?q=Devi%20Kshetram%20Cherthala%20Kerala&t=&z=16&ie=UTF8&iwloc=&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        allowfullscreen
+      ></iframe>
+
+      <!-- Overlaid Left Floating White Contact Card (Stacks Above Map on Mobile) -->
+      <div class="map-overlay-inner">
+        <div class="floating-contact-card reveal">
+          <span class="micro-label">Showroom Locations</span>
+          <h2 class="floating-contact-title">Visit Us in Cherthala or Call for Enquiries</h2>
+
+          <div class="contact-rows">
+            <div>
+              <div class="contact-row-label">Cherthala Flagship</div>
+              <!-- PLACEHOLDER: Managed via js/config.js -->
+              <div class="contact-row-value" data-cherthala-address>
+                Opposite Devi Kshetram Municipal Complex, Cherthala, Kerala — 688524
+              </div>
+            </div>
+
+            <div>
+              <div class="contact-row-label">Mannancherry Branch</div>
+              <div class="contact-row-value" data-mannancherry-address>
+                Mannancherry, Alappuzha, Kerala — 688538
+              </div>
+            </div>
+
+            <div>
+              <div class="contact-row-label">Phone &amp; Showroom Hours</div>
+              <div class="contact-row-value contact-row-inline">
+                <a href="tel:+919800000000" data-phone-href data-phone-display>+91 98XXX XXXXX</a>
+                <span class="contact-divider-pipe" aria-hidden="true">|</span>
+                <span data-store-hours>Mon – Sat, 10:00 AM – 8:00 PM</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="floating-card-actions">
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Devi+Kshetram+Municipal+Complex+Cherthala+Kerala"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="pill pill--wine"
+              data-cherthala-directions
+            >
+              Open in Google Maps
+            </a>
+
+            <a
+              href="https://wa.me/919800000000"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="pill pill--wa-soft"
+              data-whatsapp-link
+            >
+              Chat on WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ========================================================================
+       8. ULTRA-CLEAN FOOTER & FLOATING MOBILE DOCK
+       ======================================================================== -->
+  <footer class="editorial-footer">
+    <div class="container">
+      <div class="footer-watermark" aria-hidden="true">PUSHPAMANGALAM</div>
+
+      <div class="footer-bar">
+        <a href="#top" aria-label="Back to top">
+          <img src="assets/images/logo-v3.png" alt="Pushpamangalam Gold &amp; Diamonds — By Saju Pattara &amp; Sons" class="footer-logo-compact" />
+        </a>
+
+        <ul class="footer-nav-row">
+          <li><a href="#collections">Collections</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#legacy">Legacy</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#visit-us">Visit Us</a></li>
+        </ul>
+
+        <!-- PLACEHOLDER: Social Media URLs managed via js/config.js -->
+        <div class="footer-socials" aria-label="Social Media">
+          <a href="#" target="_blank" rel="noopener noreferrer" class="social-circle" aria-label="Instagram" data-social="instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+            </svg>
+          </a>
+          <a href="#" target="_blank" rel="noopener noreferrer" class="social-circle" aria-label="Facebook" data-social="facebook">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+            </svg>
+          </a>
+          <a href="#" target="_blank" rel="noopener noreferrer" class="social-circle" aria-label="YouTube" data-social="youtube">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z" />
+              <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-meta-bottom">
+        <p>&copy; <span id="current-year">2026</span> Pushpamangalam Gold &amp; Diamonds (By Saju Pattara &amp; Sons). All rights reserved.</p>
+        <p>BIS 916 HUID Hallmarked Gold &bull; IGI Certified Diamonds</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- DESKTOP FLOATING WHATSAPP PILL -->
+  <a
+    href="https://wa.me/919800000000"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="desktop-wa-pill"
+    aria-label="Need help? Chat with us on WhatsApp"
+    data-whatsapp-link
+  >
+    <span class="wa-dot-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+      </svg>
+    </span>
+    <span>Need help? Chat with us</span>
+  </a>
+
+  <!-- MOBILE FLOATING ROUNDED PILL DOCK -->
+  <nav class="mobile-floating-dock" aria-label="Quick Contact Dock">
+    <div class="dock-grid">
+      <a href="tel:+919800000000" class="dock-item dock-item--call" data-phone-href>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+        </svg>
+        Call
+      </a>
+
+      <a
+        href="https://wa.me/919800000000"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="dock-item dock-item--wa"
+        data-whatsapp-link
+      >
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+        </svg>
+        WhatsApp
+      </a>
+
+      <a
+        href="https://www.google.com/maps/search/?api=1&query=Devi+Kshetram+Municipal+Complex+Cherthala+Kerala"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="dock-item dock-item--map"
+        data-cherthala-directions
+      >
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+          <circle cx="12" cy="10" r="3" />
+        </svg>
+        Map
+      </a>
+    </div>
+  </nav>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

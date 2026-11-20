@@ -16,7 +16,13 @@ This repository is structured for **GitHub Pages** so multiple website design ve
 │   ├── js/config.js    # Edit phone, WhatsApp, addresses & social links here
 │   ├── js/main.js
 │   └── assets/images/
-└── v2/                 # Version 2: Pearl Ivory, Royal Peacock Teal (#145B5F) & Champagne Gold
+├── v2/                 # Version 2: Pearl Ivory, Royal Peacock Teal (#145B5F) & Champagne Gold
+│   ├── index.html
+│   ├── css/styles.css
+│   ├── js/config.js
+│   ├── js/main.js
+│   └── assets/images/
+└── v3/                 # Version 3: High-Fashion Editorial Minimalism (White, Linen, Wine Burgundy & Bodoni Moda)
     ├── index.html
     ├── css/styles.css
     ├── js/config.js
