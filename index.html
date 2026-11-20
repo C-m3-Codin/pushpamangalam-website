@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pushpamangalam Gold &amp; Diamonds — Website Design Previews</title>
+  <link rel="icon" type="image/png" href="v1/assets/images/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    :root {
+      --bg-ivory: #FAF7F2;
+      --bg-white: #FFFFFF;
+      --gold: #C5A059;
+      --gold-dark: #9E7B38;
+      --divider: #E5D3B3;
+      --burgundy: #6B1D2F;
+      --burgundy-hover: #531423;
+      --text: #2A2421;
+      --muted: #6A5E56;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-ivory);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 3.5rem 1.5rem 4rem;
+      flex: 1;
+    }
+
+    .hub-header {
+      text-align: center;
+      padding-bottom: 2.5rem;
+      margin-bottom: 2.75rem;
+      border-bottom: 1px solid var(--divider);
+    }
+
+    .hub-logo {
+      height: 92px;
+      width: auto;
+      margin: 0 auto 1.4rem;
+      display: block;
+    }
+
+    .hub-eyebrow {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold-dark);
+      margin-bottom: 0.55rem;
+    }
+
+    .hub-title {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(1.75rem, 3vw, 2.35rem);
+      color: var(--burgundy);
+      margin-bottom: 0.65rem;
+    }
+
+    .hub-subtitle {
+      color: var(--muted);
+      max-width: 560px;
+      margin: 0 auto;
+      font-size: 0.96rem;
+    }
+
+    .versions-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+      gap: 1.75rem;
+    }
+
+    .version-card {
+      background: var(--bg-white);
+      border: 1px solid var(--divider);
+      border-radius: 16px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 8px 28px rgba(42, 36, 33, 0.05);
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+
+    .version-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--gold);
+      box-shadow: 0 16px 36px rgba(107, 29, 47, 0.1);
+    }
+
+    .version-thumb {
+      position: relative;
+      aspect-ratio: 16 / 10;
+      overflow: hidden;
+      background: #F5EFE6;
+    }
+
+    .version-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .version-badge {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: rgba(255, 255, 255, 0.94);
+      color: var(--burgundy);
+      border: 1px solid var(--divider);
+      border-radius: 999px;
+      padding: 0.28rem 0.8rem;
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .version-body {
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      gap: 0.8rem;
+    }
+
+    .version-title {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 1.32rem;
+      color: var(--burgundy);
+    }
+
+    .version-desc {
+      font-size: 0.9rem;
+      color: var(--muted);
+      flex: 1;
+    }
+
+    .swatches {
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding-top: 0.25rem;
+    }
+
+    .swatch {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      border: 1px solid rgba(42, 36, 33, 0.16);
+    }
+
+    .swatch-label {
+      font-size: 0.76rem;
+      color: var(--muted);
+      margin-left: 0.35rem;
+    }
+
+    .version-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.45rem;
+      margin-top: 0.5rem;
+      padding: 0.82rem 1.35rem;
+      border-radius: 999px;
+      background: var(--burgundy);
+      color: #FFFFFF;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .version-btn:hover {
+      background: var(--burgundy-hover);
+      transform: translateY(-1px);
+    }
+
+    /* Placeholder slot card for upcoming versions */
+    .version-card--next {
+      background: linear-gradient(155deg, #FFFFFF 0%, #FAF4EA 100%);
+      border: 1.5px dashed var(--gold);
+      box-shadow: none;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2.5rem 1.75rem;
+      min-height: 300px;
+    }
+
+    .version-card--next:hover {
+      transform: none;
+      box-shadow: none;
+    }
+
+    .next-pill {
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold-dark);
+      background: #FFFFFF;
+      border: 1px solid var(--divider);
+      border-radius: 999px;
+      padding: 0.3rem 0.85rem;
+      margin-bottom: 1rem;
+    }
+
+    .hub-footer {
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.82rem;
+      color: var(--muted);
+      border-top: 1px solid var(--divider);
+      background: #F3ECE2;
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <header class="hub-header">
+      <img
+        src="v1/assets/images/logo-full-light.png"
+        alt="Pushpamangalam Gold &amp; Diamonds — By Saju Pattara &amp; Sons"
+        class="hub-logo"
+      />
+      <span class="hub-eyebrow">Client Review Portal</span>
+      <h1 class="hub-title">Website Design Concepts</h1>
+      <p class="hub-subtitle">
+        Explore and compare live responsive desktop &amp; mobile prototypes prepared for Pushpamangalam Gold &amp; Diamonds.
+      </p>
+    </header>
+
+    <section class="versions-grid" aria-label="Website Design Versions">
+
+      <!-- ====================================================================
+           VERSION 1 (v1) — Active Prototype
+           ==================================================================== -->
+      <article class="version-card">
+        <div class="version-thumb">
+          <img src="v1/assets/images/hero-bridal.jpg" alt="Version 1 Preview — Warm Ivory & Deep Burgundy" />
+          <span class="version-badge">Version 1 &bull; v1</span>
+        </div>
+        <div class="version-body">
+          <h2 class="version-title">Ivory &amp; Burgundy Heritage Luxury</h2>
+          <p class="version-desc">
+            Light, airy modern-heritage direction pairing Warm Ivory and Soft Alabaster with Deep Burgundy headings, Antique Gold accents, and a responsive mobile quick-action bar.
+          </p>
+          <div class="swatches" aria-label="Color palette">
+            <span class="swatch" style="background:#FAF7F2;" title="Warm Ivory #FAF7F2"></span>
+            <span class="swatch" style="background:#6B1D2F;" title="Deep Burgundy #6B1D2F"></span>
+            <span class="swatch" style="background:#C5A059;" title="Antique Gold #C5A059"></span>
+            <span class="swatch-label">Ivory &bull; Burgundy &bull; Gold</span>
+          </div>
+          <a href="v1/index.html" class="version-btn">Open v1 Preview →</a>
+        </div>
+      </article>
+
+      <!-- ====================================================================
+           PLACEHOLDER FOR FUTURE VERSIONS (v2, v3, etc.)
+           Copy the <article class="version-card"> block above, point href to
+           "v2/index.html", and remove this placeholder card when v2 is ready.
+           ==================================================================== -->
+      <article class="version-card version-card--next">
+        <span class="next-pill">Coming Next &bull; v2</span>
+        <h2 class="version-title" style="margin-bottom: 0.5rem;">Next Concept Slot</h2>
+        <p class="version-desc" style="flex: none; max-width: 260px;">
+          Add a new folder (<code>v2/</code>, <code>v3/</code>) to compare alternative themes—such as Peacock Teal &amp; Gold or Editorial Lookbook layouts.
+        </p>
+      </article>
+
+    </section>
+  </main>
+
+  <footer class="hub-footer">
+    Pushpamangalam Gold &amp; Diamonds (By Saju Pattara &amp; Sons) &bull; Design Preview Repository
+  </footer>
+</body>
+</html>
