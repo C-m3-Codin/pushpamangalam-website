@@ -50,6 +50,18 @@ After pushing to GitHub (`https://github.com/<your-username>/<repo-name>`):
    - **Branch:** `main` and folder `/ (root)`
    - Click **Save** — GitHub Pages will publish your site within ~1 minute.
 
+## How to Replace Placeholder Data with Real Data
+
+Every editable data point across **`v1`**, **`v2`**, and **`v3`** is tagged with **`[EDIT DATA`** so you can press `Ctrl+Shift+F` in VS Code (or any code editor) and jump straight to every item:
+
+| Data Point | Where to Edit | Notes |
+| --- | --- | --- |
+| **Phone, WhatsApp, Addresses, PINs, Store Hours, Google Rating/Count, Social URLs** | `v1/js/config.js`, `v2/js/config.js`, `v3/js/config.js` | Single-source config — automatically updates header, hero, collection WhatsApp links, reviews summary, visit card, footer, and mobile bar |
+| **Google Maps Embed Pin** | `v*/index.html` (`[EDIT DATA: Google Maps Embed Iframe URL]`) | Copy the `src` URL from Google Maps → Share → Embed a map |
+| **Customer Testimonials** | `v*/index.html` (`[EDIT DATA: Testimonial ...]`) | Update quote text, reviewer initials, name, and city |
+| **About Us Story & Stats** | `v*/index.html` (`[EDIT DATA: About Us ...]`) | Update milestones, founding year, and showroom captions |
+| **Product & Showroom Photos** | `v*/assets/images/` | Swap files keeping the same filename (`hero-bridal.jpg`, `cat-*.jpg`, `showroom-*.jpg`) |
+
 ## Adding a New Version (`v2`, `v3`, ...)
 
 1. Copy `v1/` to `v2/` (or create a fresh `v2/` folder with its own `index.html`, `css/`, `js/`, and `assets/`).

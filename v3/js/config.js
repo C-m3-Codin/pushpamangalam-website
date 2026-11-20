@@ -1,62 +1,75 @@
 /**
  * ============================================================================
- * PUSHPAMANGALAM GOLD AND DIAMONDS — SITE CONFIGURATION (EASY PLACEHOLDERS)
+ * PUSHPAMANGALAM GOLD & DIAMONDS — CENTRALIZED DATA CONFIGURATION
  * ============================================================================
- * Update the placeholder values below in ONE place to automatically update
- * phone links, WhatsApp chat buttons, addresses, map links, and social profiles
- * across the entire website (Desktop Header, Hero, Collection Cards, Visit Us,
- * Footer, Floating WhatsApp Button, and Mobile Sticky Bottom Bar).
+ * SEARCH TIP: Search "[EDIT DATA" across this project to jump to every
+ * editable piece of real business data (text, numbers, links, reviews, photos).
+ *
+ * Updating values in THIS file automatically updates:
+ *   - Header Call & WhatsApp buttons
+ *   - Hero WhatsApp CTA & Store Hours
+ *   - All 7 Collection Cards' pre-filled WhatsApp enquiry messages
+ *   - Google Rating score, review count & profile link
+ *   - Visit Us addresses, phone, hours & Google Maps directions links
+ *   - Footer addresses, phone & social media links
+ *   - Desktop Floating WhatsApp button & Mobile Sticky Bar / Floating Dock
  * ============================================================================
  */
 
 window.SITE_CONFIG = {
-  // PLACEHOLDER: Brand Details
+  // [EDIT DATA: Brand Identity]
   brandName: "Pushpamangalam Gold & Diamonds — By Saju Pattara & Sons",
   shortName: "Pushpamangalam",
-  establishedYear: "1991", // ~35 Years Legacy
+  establishedYear: "1991", // [EDIT DATA: Exact founding year in Mannancherry]
 
-  // PLACEHOLDER: Primary Contact Phone (Update with real Cherthala showroom number)
+  // [EDIT DATA: Primary Showroom Phone Number]
+  // phoneDisplay = text shown on screen (e.g., "+91 98470 12345")
+  // phoneHref    = clickable dial link with NO spaces (e.g., "tel:+919847012345")
   phoneDisplay: "+91 98XXX XXXXX",
-  phoneHref: "tel:+919800000000", // Format: tel:+91 followed by 10 digits (no spaces)
+  phoneHref: "tel:+919800000000",
 
-  // PLACEHOLDER: WhatsApp Business Number (Country code + 10 digits, NO '+' or spaces)
+  // [EDIT DATA: WhatsApp Business Number]
+  // Format: Country code + 10-digit mobile number, DIGITS ONLY (no '+', no spaces)
+  // Example: "919847012345"
   whatsappNumber: "919800000000",
-  whatsappDefaultMessage:
-    "Namaskaram Pushpamangalam Gold and Diamonds! I would like to enquire about your jewellery collections at the Cherthala showroom.",
 
-  // PLACEHOLDER: Cherthala Flagship Showroom Details
+  // [EDIT DATA: Default WhatsApp Greeting Message]
+  whatsappDefaultMessage:
+    "Namaskaram Pushpamangalam Gold & Diamonds! I would like to enquire about your jewellery collections at the Cherthala showroom.",
+
+  // [EDIT DATA: Cherthala New Flagship Showroom Address & Google Maps Link]
   cherthalaShowroom: {
     title: "Cherthala Flagship Showroom",
     address:
-      "Opposite Devi Kshetram Municipal Complex, Cherthala, Kerala — 688524", // PLACEHOLDER: Verify exact PIN & building name
+      "Opposite Devi Kshetram Municipal Complex, Cherthala, Kerala — 688524", // [EDIT DATA: Verify building name, street & exact PIN]
     directionsUrl:
-      "https://www.google.com/maps/search/?api=1&query=Devi+Kshetram+Municipal+Complex+Cherthala+Kerala", // PLACEHOLDER: Replace with exact Google Business Profile Maps link
+      "https://www.google.com/maps/search/?api=1&query=Devi+Kshetram+Municipal+Complex+Cherthala+Kerala", // [EDIT DATA: Paste exact Google Business Profile share link]
   },
 
-  // PLACEHOLDER: Mannancherry Legacy Branch Details
+  // [EDIT DATA: Mannancherry Legacy Branch Address & Google Maps Link]
   mannancherryBranch: {
     title: "Mannancherry Legacy Branch",
-    address: "Mannancherry, Alappuzha, Kerala — 688538", // PLACEHOLDER: Verify exact landmark & PIN
+    address: "Mannancherry, Alappuzha, Kerala — 688538", // [EDIT DATA: Verify exact landmark & PIN]
     directionsUrl:
-      "https://www.google.com/maps/search/?api=1&query=Mannancherry+Alappuzha+Kerala", // PLACEHOLDER: Replace with exact Mannancherry branch Maps link
+      "https://www.google.com/maps/search/?api=1&query=Mannancherry+Alappuzha+Kerala", // [EDIT DATA: Paste exact Mannancherry Google Maps link]
   },
 
-  // PLACEHOLDER: Store Hours
-  storeHours: "Mon – Sat, 10:00 AM – 8:00 PM",
-  sundayNote: "Sunday: By Appointment / Closed", // PLACEHOLDER: Update Sunday timing
+  // [EDIT DATA: Showroom Opening Hours]
+  storeHours: "Mon – Sat, 10:00 AM – 8:00 PM", // [EDIT DATA: Update opening/closing times & days]
+  parkingNote: "Ample parking available near Municipal Complex", // [EDIT DATA: Optional visitor note]
 
-  // PLACEHOLDER: Google Reviews Summary
+  // [EDIT DATA: Google Business Profile Reviews Summary]
   googleReviews: {
-    rating: "4.9",
-    countText: "500+",
+    rating: "4.9",       // [EDIT DATA: Live Google star rating, e.g. "4.9"]
+    countText: "500+",   // [EDIT DATA: Live review count text, e.g. "540+"]
     profileUrl:
-      "https://www.google.com/maps/search/?api=1&query=Pushpamangalam+Gold+and+Diamonds+Cherthala", // PLACEHOLDER: Replace with Google Review link
+      "https://www.google.com/maps/search/?api=1&query=Pushpamangalam+Gold+and+Diamonds+Cherthala", // [EDIT DATA: Paste direct Google Reviews URL]
   },
 
-  // PLACEHOLDER: Social Media Profile Links
+  // [EDIT DATA: Official Social Media Profile URLs]
   social: {
-    instagram: "https://instagram.com/pushpamangalamgold", // PLACEHOLDER
-    facebook: "https://facebook.com/pushpamangalamgold", // PLACEHOLDER
-    youtube: "https://youtube.com/@pushpamangalamgold", // PLACEHOLDER
+    instagram: "https://instagram.com/pushpamangalamgold", // [EDIT DATA: Real Instagram URL]
+    facebook: "https://facebook.com/pushpamangalamgold",   // [EDIT DATA: Real Facebook URL]
+    youtube: "https://youtube.com/@pushpamangalamgold",    // [EDIT DATA: Real YouTube URL]
   },
 };

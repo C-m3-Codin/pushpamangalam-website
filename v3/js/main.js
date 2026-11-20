@@ -1,12 +1,10 @@
 /**
  * ============================================================================
- * PUSHPAMANGALAM GOLD AND DIAMONDS — INTERACTIVE BEHAVIOUR & CONFIG HYDRATION
+ * PUSHPAMANGALAM GOLD & DIAMONDS — INTERACTIVE BEHAVIOUR & CONFIG HYDRATION
  * ============================================================================
- * 1. Hydrates contact numbers, WhatsApp deep links, addresses, and social URLs
- *    from window.SITE_CONFIG (js/config.js).
- * 2. Powers mobile drawer navigation with accessible focus & keyboard handling.
- * 3. Adds sticky header shadow on scroll and active section highlighting.
- * 4. Applies subtle scroll-reveal motion when elements enter the viewport.
+ * Automatically binds real business data from js/config.js to HTML elements
+ * marked with data-* attributes, powers the mobile drawer menu, sticky header
+ * shadow, active section nav highlight, and subtle scroll-reveal motion.
  * ============================================================================
  */
 
@@ -15,22 +13,15 @@
 
   const cfg = window.SITE_CONFIG || {};
 
-  /**
-   * Build a clean WhatsApp click-to-chat URL with an optional custom enquiry message.
-   */
   function buildWhatsAppUrl(customMessage) {
     const number = (cfg.whatsappNumber || "919800000000").replace(/[^\d]/g, "");
     const message =
       customMessage ||
       cfg.whatsappDefaultMessage ||
-      "Namaskaram! I would like to enquire about Pushpamangalam Gold and Diamonds.";
+      "Namaskaram! I would like to enquire about Pushpamangalam Gold & Diamonds.";
     return `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
   }
 
-  /**
-   * Hydrate dynamic placeholder bindings from js/config.js so changing values
-   * in one file keeps the whole website synchronized.
-   */
   function hydrateSiteConfig() {
     // 1. Phone numbers & tel: links
     document.querySelectorAll("[data-phone-href]").forEach((el) => {
@@ -44,7 +35,7 @@
     document.querySelectorAll("[data-whatsapp-link]").forEach((el) => {
       const category = el.getAttribute("data-whatsapp-category");
       const customMsg = category
-        ? `Namaskaram Pushpamangalam Gold and Diamonds! I would like to enquire about your "${category}" collection at the Cherthala showroom.`
+        ? `Namaskaram Pushpamangalam Gold & Diamonds! I would like to enquire about your "${category}" collection at the Cherthala showroom.`
         : el.getAttribute("data-whatsapp-message") || cfg.whatsappDefaultMessage;
       el.setAttribute("href", buildWhatsAppUrl(customMsg));
     });
@@ -65,15 +56,24 @@
       });
     }
 
-    // 4. Store hours
+    // 4. Store hours & parking note
     document.querySelectorAll("[data-store-hours]").forEach((el) => {
       if (cfg.storeHours) el.textContent = cfg.storeHours;
     });
+    document.querySelectorAll("[data-parking-note]").forEach((el) => {
+      if (cfg.parkingNote) el.textContent = cfg.parkingNote;
+    });
 
-    // 5. Google Reviews link & text
+    // 5. Google Reviews rating, count & link
     if (cfg.googleReviews) {
       document.querySelectorAll("[data-google-reviews-url]").forEach((el) => {
         el.setAttribute("href", cfg.googleReviews.profileUrl);
+      });
+      document.querySelectorAll("[data-google-rating]").forEach((el) => {
+        if (cfg.googleReviews.rating) el.textContent = cfg.googleReviews.rating;
+      });
+      document.querySelectorAll("[data-google-count]").forEach((el) => {
+        if (cfg.googleReviews.countText) el.textContent = cfg.googleReviews.countText;
       });
     }
 
@@ -94,9 +94,6 @@
     }
   }
 
-  /**
-   * Mobile Navigation Drawer (Accessible Toggle)
-   */
   function initMobileNav() {
     const openBtn = document.getElementById("mobile-menu-open");
     const closeBtn = document.getElementById("mobile-menu-close");
@@ -126,12 +123,10 @@
     if (closeBtn) closeBtn.addEventListener("click", closeDrawer);
     backdrop.addEventListener("click", closeDrawer);
 
-    // Close drawer when any navigation link inside it is tapped
     drawer.querySelectorAll("a").forEach((link) => {
       link.addEventListener("click", closeDrawer);
     });
 
-    // Close on Escape key
     document.addEventListener("keydown", (event) => {
       if (event.key === "Escape" && drawer.classList.contains("is-open")) {
         closeDrawer();
@@ -140,9 +135,6 @@
     });
   }
 
-  /**
-   * Sticky Header Elevation & Active Nav Link Tracking
-   */
   function initScrollEffects() {
     const header = document.getElementById("site-header");
     const navLinks = Array.from(document.querySelectorAll(".nav-link"));
@@ -159,7 +151,6 @@
         header.classList.toggle("is-scrolled", scrollY > 12);
       }
 
-      // Highlight active navigation link
       let currentId = "";
       const offset = 150;
       sections.forEach((sec) => {
@@ -177,9 +168,6 @@
     onScroll();
   }
 
-  /**
-   * Subtle Scroll Reveal Animation
-   */
   function initScrollReveal() {
     const elements = document.querySelectorAll(".reveal");
     if (!elements.length) return;
