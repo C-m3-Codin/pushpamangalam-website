@@ -10,10 +10,16 @@ This repository is structured for **GitHub Pages** so multiple website design ve
 ├── .nojekyll           # Disables Jekyll so static folders serve cleanly on GitHub Pages
 ├── .gitignore
 ├── README.md
-└── v1/                 # Version 1: Warm Ivory, Soft Alabaster & Deep Burgundy Heritage Luxury
+├── v1/                 # Version 1: Warm Ivory, Soft Alabaster & Deep Burgundy Heritage Luxury
+│   ├── index.html
+│   ├── css/styles.css
+│   ├── js/config.js    # Edit phone, WhatsApp, addresses & social links here
+│   ├── js/main.js
+│   └── assets/images/
+└── v2/                 # Version 2: Pearl Ivory, Royal Peacock Teal (#145B5F) & Champagne Gold
     ├── index.html
     ├── css/styles.css
-    ├── js/config.js    # Edit phone, WhatsApp, addresses & social links here
+    ├── js/config.js
     ├── js/main.js
     └── assets/images/
 ```
