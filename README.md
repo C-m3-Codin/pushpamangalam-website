@@ -34,7 +34,13 @@ This repository is structured for **GitHub Pages** so multiple website design ve
 │   ├── js/config.js
 │   ├── js/main.js
 │   └── assets/images/
-└── v5/                 # Version 5: Sketch-Matched Seamless Landscape Hero (Unboxed Logo + Writings + CTAs + 2 Locations | Modern-Heritage Model)
+├── v5/                 # Version 5: Sketch-Matched Seamless Landscape Hero (Unboxed Logo + Writings + CTAs + 2 Locations | Modern-Heritage Model)
+│   ├── index.html
+│   ├── css/styles.css
+│   ├── js/config.js
+│   ├── js/main.js
+│   └── assets/images/
+└── v6/                 # Version 6: Same Seamless Layout + Enlarged Logo + Ultra-Modern High-Fashion Couture Model
     ├── index.html
     ├── css/styles.css
     ├── js/config.js
