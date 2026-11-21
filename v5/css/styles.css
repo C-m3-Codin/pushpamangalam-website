@@ -529,22 +529,25 @@ h1, h2, h3, h4 {
 
 /* LEFT SIDE — Matches the Sketch Vertical Stack */
 .hero-left {
-  padding: 3rem 1rem 3.5rem 0;
-  max-width: 600px;
+  padding: 3.5rem 1.25rem 4rem 0;
+  max-width: 620px;
   text-align: left;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
-/* Unboxed Prominent Official Brand Lockup */
+/* Unboxed Prominent Official Brand Lockup — Scaled to Match Headline Visual Weight */
 .hero-brand-lockup {
-  margin-bottom: 1.9rem;
+  width: 100%;
+  padding: 0.4rem 0 0.75rem;
+  margin-bottom: 2.25rem;
 }
 
 .hero-logo-large {
-  height: clamp(118px, 15.5vh, 162px);
-  width: auto;
+  width: clamp(320px, 34vw, 470px);
+  max-width: 100%;
+  height: auto;
   display: block;
   object-fit: contain;
   object-position: left center;
@@ -552,10 +555,10 @@ h1, h2, h3, h4 {
 
 /* Subtle Gold Editorial Hairline between Logo & Writings */
 .hero-accent-rule {
-  width: 64px;
+  width: 72px;
   height: 1.5px;
   background-color: var(--brand-gold);
-  margin-bottom: 1.35rem;
+  margin-bottom: 1.65rem;
 }
 
 /* Writings Block */
@@ -1647,8 +1650,14 @@ h1, h2, h3, h4 {
   .brand-logo-img { height: 42px; }
   .footer-logo-img { height: 82px; }
 
+  .hero-brand-lockup {
+    padding: 0.25rem 0 0.5rem;
+    margin-bottom: 1.85rem;
+  }
+
   .hero-logo-large {
-    height: 100px;
+    width: min(310px, 86vw);
+    height: auto;
   }
 
   .hero-cta-row {
