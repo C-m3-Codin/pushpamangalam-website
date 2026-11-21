@@ -288,14 +288,14 @@ h1, h2, h3, h4 {
 }
 
 .brand-logo-img {
-  height: 48px;
+  height: 40px;
   width: auto;
   display: block;
   object-fit: contain;
 }
 
 .drawer-logo-img {
-  height: 40px;
+  height: 32px;
   width: auto;
   display: block;
   object-fit: contain;
@@ -1647,7 +1647,10 @@ h1, h2, h3, h4 {
   .section { padding: 3.75rem 0; }
   .section-header { margin-bottom: 2.2rem; }
 
-  .brand-logo-img { height: 42px; }
+  .brand-logo-img {
+    height: 32px;
+    max-width: calc(100vw - 135px);
+  }
   .footer-logo-img { height: 82px; }
 
   .hero-brand-lockup {
