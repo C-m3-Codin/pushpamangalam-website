@@ -28,7 +28,13 @@ This repository is structured for **GitHub Pages** so multiple website design ve
 │   ├── js/config.js
 │   ├── js/main.js
 │   └── assets/images/
-└── v4/                 # Version 4: v1 Base + Full-Viewport Landscape Split Hero (Logo + Model), v3 Glass Tag/Watermark Layer, No Store Photos
+├── v4/                 # Version 4: v1 Base + Full-Viewport Landscape Split Hero (Logo + Model), v3 Glass Tag/Watermark Layer, No Store Photos
+│   ├── index.html
+│   ├── css/styles.css
+│   ├── js/config.js
+│   ├── js/main.js
+│   └── assets/images/
+└── v5/                 # Version 5: Sketch-Matched Seamless Landscape Hero (Unboxed Logo + Writings + CTAs + 2 Locations | Modern-Heritage Model)
     ├── index.html
     ├── css/styles.css
     ├── js/config.js
