@@ -22,7 +22,13 @@ This repository is structured for **GitHub Pages** so multiple website design ve
 │   ├── js/config.js
 │   ├── js/main.js
 │   └── assets/images/
-└── v3/                 # Version 3: High-Fashion Editorial Minimalism (White, Linen, Wine Burgundy & Bodoni Moda)
+├── v3/                 # Version 3: High-Fashion Editorial Minimalism (White, Linen, Wine Burgundy & Bodoni Moda)
+│   ├── index.html
+│   ├── css/styles.css
+│   ├── js/config.js
+│   ├── js/main.js
+│   └── assets/images/
+└── v4/                 # Version 4: v1 Base + Full-Viewport Landscape Split Hero (Logo + Model), v3 Glass Tag/Watermark Layer, No Store Photos
     ├── index.html
     ├── css/styles.css
     ├── js/config.js
